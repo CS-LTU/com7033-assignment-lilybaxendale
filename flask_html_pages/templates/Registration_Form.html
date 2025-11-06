@@ -14,21 +14,41 @@
   <a href="/login">Login</a> |
 </nav>
 
-  <form method="POST" action="Registration_Success.html" autocomplete="off">
-    <p>
-      <label for="username">Username (3–16 characters):</label>
-      <input type="text" id="username" name="username" required minlength="3" maxlength="16"
-             pattern="^[A-Za-z0-9_]+$" title="Use only letters, numbers, and underscores.">
-    </p>
-    <p>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </p>
-    <p>
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min="13" max="120" required>
-    </p>
-    <p><input type="submit" value="Register"></p>
-  </form>
+ <form method="post", action="/register">
+    <div>
+      <label for="username">Username</label>
+      <input
+      type="text" 
+      id="username" 
+      name="username"
+      pattern="[A-Za-z0-9_]{5,16}"
+      title="Username must be 5-16 characters (including letters, digits, underscores)."
+      required>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input 
+        type="email"
+        id="email"
+        name="email"
+        maxlength="254"
+        title="Please enter a valid email address." 
+        required>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input 
+        type="password"
+        id="password"
+        name="password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        title="Password must be at least 8 characters, with lowercase and uppercase characters, at least one digit and a special character."
+        required>
+    </div>
+    
+    <button type="submit">Submit</button>
+    
 </body>
 </html>
