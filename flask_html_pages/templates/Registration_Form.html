@@ -9,25 +9,50 @@
 <body>
   <h1>Registration</h1>
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/about">About</a> |
-  <a href="/login">Login</a> |
-</nav>
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/login" class="nav-button">Login</a> 
+</div>
 
  <form method="post", action="/register">
-    <div>
+
+    <p>
+      <label for="First_name">First name</label>
+      <input 
+        type="First_name"
+        id="First_name"
+        name="First_name"
+        maxlength="254"
+        title="Please enter a valid first name, only letters and hyphens are allowed." 
+        required
+        pattern="^[A-Za-z-]{1,254}$"> <!-- client-side validation of first name to ensure only letters and hyphens are allowed.-->
+    </p>  
+
+    <p>
+      <label for="Last_name">Last name</label>
+      <input 
+        type="Last_name"
+        id="Last_name"
+        name="Last_name"
+        maxlength="254"
+        title="Please enter a valid last name, only letters and hyphens are allowed." 
+        required
+        pattern="^[A-Za-z-]{1,254}$"> <!-- client-side validation of last name to ensure only letters and hyphens are allowed.-->
+    </p>
+
+    <p>
       <label for="username">Username</label>
       <input
       type="text" 
       id="username" 
       name="username"
-      pattern="[A-Za-z0-9_]{5,16}"
+      pattern="[A-Za-z0-9_]{5,16}" 
       title="Username must be 5-16 characters (including letters, digits, underscores)."
-      required>
-    </div>
+      required> <!-- client-side validation of username to ensure it is between 5 and 16 characters.-->
+    </p>
 
-    <div>
+    <p>
       <label for="email">Email</label>
       <input 
         type="email"
@@ -35,10 +60,11 @@
         name="email"
         maxlength="254"
         title="Please enter a valid email address." 
-        required>
-    </div>
+        pattern="[\w\.-]+@[\w\.-]+\.[A-Za-z]{2,}$"
+        required> <!-- client-side validation of email to ensure it is the correct email format.-->
+    </p>
 
-    <div>
+    <p>
       <label for="password">Password</label>
       <input 
         type="password"
@@ -46,10 +72,11 @@
         name="password"
         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         title="Password must be at least 8 characters, with lowercase and uppercase characters, at least one digit and a special character."
-        required>
-    </div>
+        required> <!-- client-side validation of password to ensure it is at least 8 characters, with lowercase and uppercase characters, at least one digit and a special character.-->
+    </p>
     
-    <button type="submit">Submit</button>
-    
+      <button type ="submit" class="register-submit-btn">Register</button>
+</form>
+
 </body>
 </html>

@@ -1,24 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
   <title>Patient Data and Stroke Predictions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
 </head>
 <body>
   <h1>Hospital Stroke Analytics Site</h1>
 
-<nav>
-  <a href="/about">About</a> |
-  <a href="/login">Login</a> |
-  <a href="/register">Register</a>
-</nav>
+<div class="nav-container">
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/login" class="nav-button">Login</a> 
+  <a href="/register" class="nav-button">Register</a>
+</div>
 
   <p>Website for Stroke Analytics of Patients</p>
   <figure>
-    <img src="{{ url_for('static', filename='images/hospital.jpg') }}" alt="Hospital Icon" width="320">
-    <figcaption>For Health Professionals</figcaption>
+    <img src="{{ url_for('static', filename='images/graph.png') }}" alt="Hospital Icon" width="320">
   </figure>
 </body>
 </html>

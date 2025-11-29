@@ -9,28 +9,29 @@
 <body>
   <h1>Login</h1>
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/about">About</a> | |
-  <a href="/register">Register</a>
-</nav>
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/register" class="nav-button">Register</a>
+</div>
 
   <form method="POST" action="success.html" autocomplete="off">
     <p>
-      <label for="username">Username (3–16 characters):</label>
+      <label for="username">Username</label>
       <input type="text" id="username" name="username" required minlength="3" maxlength="16"
              pattern="^[A-Za-z0-9_]+$" title="Use only letters, numbers, and underscores.">
     </p>
     <p>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="password">Password</label>
+      <input type="text" id="password" name="password" type="password" required>
     </p>
-    <p>
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min="13" max="120" required>
-    </p>
-    <p><input type="submit" value="Register"></p>
+    <button type ="submit" class="login-submit-btn">Log in</button>
   </form>
+
+  <p>
+    New user? <a href="{{ url_for('register') }}">Create an account</a> 
+  </p>
 
 </body>
 </html>
+

@@ -7,8 +7,15 @@
   <title>Registration Success</title>
 </head>
 <body>
+
+<nav>
+  <a href="/">Home</a> |
+  <a href="/about">About</a> |
+  <a href="/login">Login</a> |
+</nav>  
+
   <h1>Registration Successful!</h1>
-  <p>Thank you for submitting the form. Please login on the Login Page</p>
+  <p>Thank you for submitting the form. <a href="{{ url_for('login') }}"> Login here. </a></p>
   <a href="/">Back to Home</a>
 </body>
 </html>
