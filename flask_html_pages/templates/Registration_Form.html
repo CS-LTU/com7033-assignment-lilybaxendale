@@ -9,12 +9,15 @@
 <body>
   <h1>Registration</h1>
 
+<!--Registration page where doctors new to the site can register.-->
+
 <div class="nav-container">
   <a href="/" class="nav-button">Home</a> 
   <a href="/about" class="nav-button">About</a> 
   <a href="/login" class="nav-button">Login</a> 
 </div>
 
+<!--Flash messages to show any errors in input validation -->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -29,6 +32,7 @@
     {% block content %}{% endblock %}
 </div>
 
+<!--Form for a new user to enter their first name, last name, username, email and password. -->
  <form method="post", action="/register" novalidate>
 
     <p>

@@ -8,12 +8,14 @@
 </head>
 <body>
 
+<!--Registration success page that a user is redirected to once successfully registered-->
 <div class="nav-container">
   <a href="/" class="nav-button">Home</a> 
   <a href="/about" class="nav-button">About</a> 
   <a href="/login" class="nav-button">Login</a> 
 </div> 
 
+<!--Flash message to confirm successful registration-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
