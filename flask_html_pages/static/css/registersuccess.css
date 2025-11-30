@@ -11,3 +11,30 @@ h1 {
 p {
     color: #04047c;
 }
+
+.nav-button {
+    display: inline-block;
+    background-color: white;
+    color: #04047c;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.nav-container {
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.flash-message {
+    text-align: center;
+}
+
+.flash {
+    list-style: none; /*to remove bullet points*/
+}
+
+.error {
+    color: red;
+}

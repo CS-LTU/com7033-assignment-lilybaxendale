@@ -8,11 +8,25 @@
 </head>
 <body>
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/about">About</a> |
-  <a href="/login">Login</a> |
-</nav>  
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/login" class="nav-button">Login</a> 
+</div> 
+
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
 
   <h1>Registration Successful!</h1>
   <p>Thank you for submitting the form. <a href="{{ url_for('login') }}"> Login here. </a></p>
