@@ -39,3 +39,15 @@ p {
     font-weight: bold;
     cursor: pointer;
 }
+
+.flash-message {
+    text-align: center;
+}
+
+.flash {
+    list-style: none; /*to remove bullet points*/
+}
+
+.error {
+    color: red;
+}
