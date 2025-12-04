@@ -33,7 +33,7 @@
 </div>
 
 <!--Form for a registered user to enter their username and password -->
-  <form method="POST" action="success.html" autocomplete="off">
+  <form method="POST" action="{{ url_for('login') }}" autocomplete="off">
     <p>
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required minlength="3" maxlength="16"
