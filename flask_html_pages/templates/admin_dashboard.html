@@ -11,6 +11,11 @@
 
   <!--Dashboard page for users only with role 'admin'-->
 
+<div class="nav-container">
+  <a href="/view_doctors" class="nav-button">View Doctors</a> 
+  <a href="{{ url_for('logout') }}" class="nav-button">Log out</a> 
+</div>
+
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
