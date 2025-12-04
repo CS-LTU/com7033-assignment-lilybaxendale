@@ -4,3 +4,1045 @@
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.34:5000
 2025-11-05 23:57:52,510 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 12:25:53,719 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 12:25:53,720 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 12:26:09,218 [INFO] 127.0.0.1 - - [04/Dec/2025 12:26:09] "GET / HTTP/1.1" 200 -
+2025-12-04 12:26:09,235 [WARNING] 404 Not Found: /static/images/graph.png
+2025-12-04 12:26:09,238 [ERROR] Exception on /static/images/graph.png [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:26:09,248 [INFO] 127.0.0.1 - - [04/Dec/2025 12:26:09] "[35m[1mGET /static/images/graph.png HTTP/1.1[0m" 500 -
+2025-12-04 12:26:09,313 [INFO] 127.0.0.1 - - [04/Dec/2025 12:26:09] "GET /static/css/homepage.css HTTP/1.1" 200 -
+2025-12-04 12:26:10,125 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:26:10,129 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:26:10,140 [INFO] 127.0.0.1 - - [04/Dec/2025 12:26:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:45,290 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:45] "GET / HTTP/1.1" 200 -
+2025-12-04 12:27:45,322 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:45] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+2025-12-04 12:27:45,329 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:45] "GET /static/images/graph.png HTTP/1.1" 200 -
+2025-12-04 12:27:45,344 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:45,348 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:45,352 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:50,180 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:50] "GET /about HTTP/1.1" 200 -
+2025-12-04 12:27:50,204 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:50] "GET /static/css/about.css HTTP/1.1" 200 -
+2025-12-04 12:27:50,217 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:50,220 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:50,228 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:50] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:51,560 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:51,563 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:51,567 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:52,195 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:52] "GET /login HTTP/1.1" 200 -
+2025-12-04 12:27:52,224 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:52] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-12-04 12:27:52,236 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:52,240 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:52,246 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:52] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:53,399 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:53,404 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:53,408 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:53] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:54,192 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:54] "GET /register HTTP/1.1" 200 -
+2025-12-04 12:27:54,220 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:54] "GET /static/css/registerform.css HTTP/1.1" 200 -
+2025-12-04 12:27:54,231 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:54,234 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:54,238 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:55,768 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:55,772 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:55,778 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:55] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:27:56,709 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:56] "GET /login HTTP/1.1" 200 -
+2025-12-04 12:27:56,737 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:56] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-12-04 12:27:56,748 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:27:56,751 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:27:56,757 [INFO] 127.0.0.1 - - [04/Dec/2025 12:27:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:28:06,935 [WARNING] 404 Not Found: /success.html
+2025-12-04 12:28:06,941 [ERROR] Exception on /success.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:28:06,948 [INFO] 127.0.0.1 - - [04/Dec/2025 12:28:06] "[35m[1mPOST /success.html HTTP/1.1[0m" 500 -
+2025-12-04 12:28:06,978 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:28:06,981 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:28:06,987 [INFO] 127.0.0.1 - - [04/Dec/2025 12:28:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:30:53,757 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:30:53,762 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:30:53,766 [INFO] 127.0.0.1 - - [04/Dec/2025 12:30:53] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:31:06,912 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:06] "GET /register HTTP/1.1" 200 -
+2025-12-04 12:31:06,943 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:06] "[36mGET /static/css/registerform.css HTTP/1.1[0m" 304 -
+2025-12-04 12:31:06,960 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:31:06,963 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:06,969 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:31:07,693 [WARNING] Validation failed: First name is required
+2025-12-04 12:31:07,698 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:07] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-12-04 12:31:07,704 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:07] "GET /register HTTP/1.1" 200 -
+2025-12-04 12:31:07,734 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:07] "[36mGET /static/css/registerform.css HTTP/1.1[0m" 304 -
+2025-12-04 12:31:07,749 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:31:07,752 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:07,756 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:31:09,692 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:09] "GET /about HTTP/1.1" 200 -
+2025-12-04 12:31:09,719 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:09] "[36mGET /static/css/about.css HTTP/1.1[0m" 304 -
+2025-12-04 12:31:09,729 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:31:09,733 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:09,740 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:31:11,079 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:11] "GET /login HTTP/1.1" 200 -
+2025-12-04 12:31:11,107 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:11] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-12-04 12:31:11,118 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:31:11,121 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:11,128 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-04 12:31:25,611 [WARNING] 404 Not Found: /success.html
+2025-12-04 12:31:25,615 [ERROR] Exception on /success.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:25,622 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:25] "[35m[1mPOST /success.html HTTP/1.1[0m" 500 -
+2025-12-04 12:31:25,652 [WARNING] 404 Not Found: /favicon.ico
+2025-12-04 12:31:25,655 [ERROR] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Lily Jayne Baxendale\AppData\Local\Temp\ipykernel_32252\2561818670.py", line 313, in not_found
+    return render_template("404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lily Jayne Baxendale\anaconda3\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2025-12-04 12:31:25,660 [INFO] 127.0.0.1 - - [04/Dec/2025 12:31:25] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
