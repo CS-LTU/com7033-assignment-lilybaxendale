@@ -42,3 +42,74 @@ h2 {
 .error {
     color: red;
 }
+
+/*setting maximum width on form*/
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*making inputs fill new narrower space */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/*Styling the edit form using card styling*/
+.form-container {
+    background-color: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Form grouping to make space between rows */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(32, 41, 61);
+}
+
+/* Input formatting */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/*Centering save button*/
+input[type="submit"], .save-btn {
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+/*Save button styling*/
+.save-btn {
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    display: inline-block; /*Ensures links behave like buttons */ 
+    line-height: normal;
+    background-color: rgb(36, 161, 120);
+}

@@ -9,6 +9,13 @@
 <body>
   <h1>Registered Doctors</h1>
 
+<!--Page for admins to view all registered doctors and made edits or deletions-->
+
+<div class="nav-container">
+  <a href="{{ url_for('admin_dashboard') }}" class="nav-button">Dashboard</a> 
+  <a href="{{ url_for('logout') }}" class="nav-button">Log out</a> 
+</div>
+
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
