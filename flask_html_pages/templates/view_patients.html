@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/view_patients.css') }}">
+  <title>Dashboard</title>
+
+</head>
+<body>
+  <h1>Patients</h1>
+
+<!--Page for logged in doctor to view patient records and search for a specific patient-->
+
+<div class="nav-container">
+  <a href="{{ url_for('create_report') }}" class="nav-button">Dashboard</a>
+  <a href="{{ url_for('view_reports') }}" class="nav-button">View Reports</a>
+  <a href="{{ url_for('create_report') }}" class="nav-button">Create Report</a>
+  <a href="{{ url_for('logout') }}" class="nav-button">Log out</a>  
+</div>
+
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+
+<!--Search box for doctor to search for patient based on Patient ID-->
+<div class="search-container">
+  <form action="{{ url_for('view_patients') }}" method="GET">
+    <input 
+      type="text"
+      name="search" 
+      class="search-input" 
+      placeholder="Search by Patient ID..." 
+      value="{{ search_query }}"
+      list="patient_list"
+      autocomplete="off"
+    >
+    <datalist id="patient_list">
+      {% for p in all_patients_list %}
+        <option value="{{ p[0]}}">Patient {{ p[0] }} ({{ p[1] }}, Age:{{ p[2] }})</option>
+      {% endfor %}
+    </datalist>
+
+    <button type="submit" class="btn search-btn">Search</button>
+
+    {% if search_query %}
+      <a href="{{ url_for('view_patients') }}" class="clear-link">Clear Search</a>
+    {% endif %}
+  </form>
+</div>
+
+<table>
+  <tr>
+    <th>Patient ID</th>
+    <th>Gender</th>
+    <th>Age</th>
+    <th>Has Hypertension</th>
+    <th>Heart Disease</th>
+    <th>Ever Married</th>
+    <th>Work Type</th>
+    <th>Residence Type</th>
+    <th>Average Glucose Level</th>
+    <th>BMI</th>
+    <th>Smoking Status</th>
+    <th>Had a Stroke</th>
+  </tr>
+
+  {% for p in patients %}
+    <tr>
+      <td>{{ p[0] }}</td>
+      <td>{{ p[1] }}</td>
+      <td>{{ p[2] }}</td>
+      <td>{{ "Yes" if p[3] == 1 else "No" }}</td>
+      <td>{{ "Yes" if p[4] == 1 else "No" }}</td>
+      <td>{{ p[5] }}</td>
+      <td>{{ p[6] }}</td>
+      <td>{{ p[7] }}</td>
+      <td>{{ p[8] }}</td>
+      <td>{{ p[9] }}</td>
+      <td>{{ p[10] }}</td>
+      <td>{{ "Yes" if p[11] == 1 else "No" }}</td>
+    </tr>
+    {% else %}
+    <tr>
+      <td colspan="12">No patients found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!--Pagination for doctors to toggle through patients of different patients records-->
+<div class="pagination-container">
+  {% if page > 1 %}
+    <a href="{{ url_for('view_patients', page=page-1, search=search_query) }}" class="nav-button">&laquo; Previous</a>
+  {% else %}
+    <span class="nav-button disabled">&laquo; Previous</span>
+  {% endif %}
+
+  <span class="page-info">Page {{ page }} of {{ total_pages }}</span>
+
+  {% if page < total_pages %}
+    <a href="{{ url_for('view_patients', page=page+1, search=search_query) }}" class="nav-button">Next &raquo;</a>
+  {% else %}
+    <span class="nav-button disabled">Next &raquo;</span>
+  {% endif %}
+</div>
+
+</body>
+</html>
