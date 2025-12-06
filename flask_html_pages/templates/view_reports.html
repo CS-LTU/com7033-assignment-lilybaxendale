@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/view_reports.css') }}">
+  <title>Dashboard</title>
+
+</head>
+<body>
+  <h1>My Medical Reports</h1>
+
+<div class="nav-container">
+    <a href="{{ url_for('create_report') }}" class="nav-button">Dashboard</a>
+  <a href="{{ url_for('create_report') }}" class="nav-button">Create Report</a>
+  <a href="{{ url_for('logout') }}" class="nav-button">Log out</a>  
+</div>
+
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+<table>
+  <tr>
+    <th>Report ID</th>
+    <th>Patient ID</th>
+    <th>Notes</th>
+    <th>Stroke Prediction</th>
+    <th>Treatment</th>
+    <th>Date Created</th>
+    <th>Actions</th>
+  </tr>
+
+  {% for report in reports %}
+    <tr>
+      <td>{{ report.report_id }}</td>
+      <td>{{ report.patient_id }}</td>
+      <td>{{ report.doctor_notes }}</td>
+      <td>{{ report.stroke_prediction }}</td>
+      <td>{{ report.treatment }}</td>
+      <td>{{ report.created_at }}</td>
+
+      <td class="action-cell">
+        <div class="action-buttons">
+          <a class="btn edit-btn" href="{{ url_for('edit_report', report_id=report.report_id) }}">Edit</a>
+
+          <form method="POST" action="{{ url_for('delete_report', report_id=report.report_id) }}" onsubmit="return confirm('Delete this report?');">
+            <button type="submit" class="btn delete-btn">Delete</button>
+          </form>
+        </div>
+      </td> 
+    </tr>
+    {% else %}
+    <tr>
+      <td colspan="5">You have not created any medical reports yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
