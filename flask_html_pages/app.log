@@ -1512,3 +1512,35 @@ Traceback (most recent call last):
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: 404.html
 2025-12-04 13:05:46,033 [INFO] 127.0.0.1 - - [04/Dec/2025 13:05:46] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-06 16:19:03,644 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-06 16:19:03,646 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-06 16:19:10,531 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:10] "GET / HTTP/1.1" 200 -
+2025-12-06 16:19:10,654 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:10] "GET /static/css/homepage.css HTTP/1.1" 200 -
+2025-12-06 16:19:10,656 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:10] "GET /static/images/graph.png HTTP/1.1" 200 -
+2025-12-06 16:19:12,981 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:12] "GET /login HTTP/1.1" 200 -
+2025-12-06 16:19:13,012 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:13] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-12-06 16:19:20,860 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-06 16:19:20,873 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:20] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-06 16:19:20,893 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:20] "GET /admin_dashboard HTTP/1.1" 200 -
+2025-12-06 16:19:20,930 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:20] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-12-06 16:19:22,827 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:22] "GET /view_doctors HTTP/1.1" 200 -
+2025-12-06 16:19:22,856 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:22] "GET /static/css/doctors.css HTTP/1.1" 200 -
+2025-12-06 16:19:41,184 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:41] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-06 16:19:41,195 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:41] "GET /login HTTP/1.1" 200 -
+2025-12-06 16:19:41,226 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:41] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-12-06 16:19:58,187 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-06 16:19:58,204 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:58] "GET /dashboard HTTP/1.1" 200 -
+2025-12-06 16:19:58,237 [INFO] 127.0.0.1 - - [06/Dec/2025 16:19:58] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-06 16:20:06,618 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:06] "GET /view_reports HTTP/1.1" 200 -
+2025-12-06 16:20:06,652 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:06] "GET /static/css/view_reports.css HTTP/1.1" 200 -
+2025-12-06 16:20:14,367 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:14] "GET /create_report HTTP/1.1" 200 -
+2025-12-06 16:20:14,396 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:14] "GET /static/css/create_report.css HTTP/1.1" 200 -
+2025-12-06 16:20:18,610 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:18] "GET /dashboard HTTP/1.1" 200 -
+2025-12-06 16:20:18,642 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:18] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-06 16:20:24,680 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:24] "GET /view_reports HTTP/1.1" 200 -
+2025-12-06 16:20:24,712 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:24] "[36mGET /static/css/view_reports.css HTTP/1.1[0m" 304 -
+2025-12-06 16:20:32,137 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:32] "GET /edit_report/MR-112 HTTP/1.1" 200 -
+2025-12-06 16:20:32,172 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:32] "GET /static/css/edit_report.css HTTP/1.1" 200 -
+2025-12-06 16:20:42,481 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:42] "GET /dashboard HTTP/1.1" 200 -
+2025-12-06 16:20:42,513 [INFO] 127.0.0.1 - - [06/Dec/2025 16:20:42] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
