@@ -1,18 +1,19 @@
 body {
-    background-color: rgb(188, 232, 247);
+    background-color: rgb(188, 232, 247); /*body of site is light blue*/
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 h1 {
-    color: #04047c;
+    color: #04047c; /*main title h1 text is dark blue*/
 }
 
 p {
-    color: #04047c;
+    color: #04047c; /*paragraph text is dark blue*/
 }
 
-.nav-button {
+/*navigation buttons are white with dark blue text and rounded shape*/
+.nav-button { 
     display: inline-block;
     background-color: white;
     color: #04047c;
@@ -22,11 +23,13 @@ p {
     margin: 0 5px;
 }
 
+/*navigation buttons are centred*/
 .nav-container{
     text-align: center;
     margin-bottom:20px;
 }
 
+/*h2 text is dark blue*/
 h2 {
     color: #04047c;
 }
