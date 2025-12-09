@@ -34,6 +34,7 @@ h2 {
     color: #04047c;
 }
 
+/*Styling login button */
 .login-submit-btn {
     width: 150px; 
     padding: 10px 20px;
@@ -64,4 +65,9 @@ h2 {
 
 .error {
     color: red;
+}
+
+/*Make username and password text bold */
+label {
+    font-weight: bold;
 }
