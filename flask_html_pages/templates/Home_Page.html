@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Patient Data and Stroke Predictions</title>
+  <title>Home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
 </head>
 <body>
-  <h1>Hospital Stroke Analytics Site</h1>
-
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Hospital Stroke Analytics</h1>
+  </div>
 <!--Home page where a user can navigate to either the about, login, or register page.-->
 
 <div class="nav-container">
@@ -16,7 +18,7 @@
   <a href="/register" class="nav-button">Register</a>
 </div>
 
-  <p>Website for Stroke Analytics of Patients</p>
+  <p>Welcome to the Stroke Prediction Analytics Application</p>
   <figure>
     <img src="{{ url_for('static', filename='images/graph.png') }}" alt="Graph" width="320">
   </figure>

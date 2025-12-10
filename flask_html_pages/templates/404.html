@@ -5,10 +5,16 @@
   <meta charset="UTF-8">
   <title>Patient Data and Stroke Predictions</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/404.css') }}">
+  <title>404 Error</title>
 </head>
+
+<!--404 error page for when the user tries to go to a page that doesn't exist-->
 <body>
-  <h1>404</h1>
-  <h2>Page not Found</h2>
+   <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>404</h1>
+    <h2>Page not Found</h2>
+    </div>
 
   <div class="error.container">
     <p>The page you are looking for does not exist.</p>

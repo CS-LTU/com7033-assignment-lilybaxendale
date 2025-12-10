@@ -123,3 +123,15 @@ input[type="submit"], .save-btn {
     line-height: normal;
     background-color: rgb(36, 161, 120);
 }
+
+/*Styling for the logo and logo container below*/
+.header-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*Styles for the logo above title*/
+.main-logo {
+    width: 220px;
+    height: auto;
+}

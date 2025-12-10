@@ -112,3 +112,16 @@ input[type="password"] {
     box-sizing: border-box;
     font-size: 14px;
 }
+
+/*Styling for the logo and logo container below*/
+.header-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*Styles for the logo above title*/
+.main-logo {
+    width: 220px;
+    height: auto;
+}
+

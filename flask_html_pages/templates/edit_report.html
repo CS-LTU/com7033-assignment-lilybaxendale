@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_report.css') }}">
-  <title>Dashboard</title>
+  <title>Edit Report</title>
 
 </head>
 <body>
-  <h1>Edit Medical Report</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Edit Report</h1>
+  </div>
 
+  <!--Buttons to navigate the site-->
 <div class="nav-container">
   <a href="{{ url_for('dashboard') }}" class="nav-button">Dashboard</a> 
   <a href="{{ url_for('view_reports') }}" class="nav-button">View Reports</a>
@@ -16,6 +20,7 @@
   <a href="{{ url_for('view_patients') }}" class="nav-button">View Patients</a>
 </div>
 
+  <!--Flash messages-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}

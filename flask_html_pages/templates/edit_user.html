@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_users.css') }}">
-  <title>Dashboard</title>
+  <title>Edit Doctor</title>
 
 </head>
 <body>
-  <h1>Edit Doctor Credentials</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Edit Doctor Credentials</h1>
+  </div>
 
+  <!--Buttons to navigate the site-->
 <div class="nav-container">
   <a href="{{ url_for('admin_dashboard') }}" class="nav-button">Dashboard</a> 
   <a href="/view_doctors" class="nav-button">View Doctors</a> 
   <a href="{{ url_for('logout') }}" class="nav-button">Log out</a> 
 </div>
 
+  <!--Flash messages-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}

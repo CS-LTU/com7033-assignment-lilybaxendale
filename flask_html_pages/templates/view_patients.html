@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/view_patients.css') }}">
-  <title>Dashboard</title>
+  <title>View Patients</title>
 
 </head>
 <body>
-  <h1>Patients</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Patients View</h1>
+  </div>
 
 <!--Page for logged in doctor to view patient records and search for a specific patient-->
 
@@ -18,6 +21,7 @@
   <a href="{{ url_for('logout') }}" class="nav-button">Log out</a>  
 </div>
 
+  <!--Flash messages-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -54,11 +58,13 @@
     <button type="submit" class="btn search-btn">Search</button>
 
     {% if search_query %}
+    <!--Option to clear search to reload all patient records-->
       <a href="{{ url_for('view_patients') }}" class="clear-link">Clear Search</a>
     {% endif %}
   </form>
 </div>
 
+  <!--Table to view Patient Records retrieved from database-->
 <table>
   <tr>
     <th>Patient ID</th>

@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
-  <title>Dashboard</title>
+  <title>Doctor Dashboard</title>
 
 </head>
 <body>
-  <h1>Dashboard</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Doctor Dashboard</h1>
+  </div>
 
 <!--Dashboard page once a user has successfully logged in via the login page. -->
 <div class="nav-container">

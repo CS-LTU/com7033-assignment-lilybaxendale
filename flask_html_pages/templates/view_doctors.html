@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/doctors.css') }}">
-  <title>Dashboard</title>
-
+  <title>View Doctors</title>
 </head>
 <body>
-  <h1>Registered Doctors</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Registered Doctors</h1>
+  </div>
 
 <!--Page for admins to view all registered doctors and made edits or deletions-->
 
@@ -16,6 +18,7 @@
   <a href="{{ url_for('logout') }}" class="nav-button">Log out</a> 
 </div>
 
+  <!--Flash messages-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -30,6 +33,7 @@
     {% block content %}{% endblock %}
 </div>
 
+  <!--Table to view Doctor Records retrieved from database-->
 <table>
   <tr>
     <th>First Name</th>
@@ -47,6 +51,7 @@
       <td>{{ user[4] }}</td>
       <td>{{ user[5] }}</td>
 
+  <!--Buttons to edit and delete doctor record-->
       <td class="action-cell">
         <div class="action-buttons">
           <a class="btn edit-btn" href="{{ url_for('edit_user', ID=user[0]) }}">Edit</a>

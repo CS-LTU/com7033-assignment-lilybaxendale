@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/view_reports.css') }}">
-  <title>Dashboard</title>
+  <title>View Reports</title>
 
 </head>
 <body>
-  <h1>My Medical Reports</h1>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>My Medical Reports</h1>
+  </div>
 
+ <!--Page for logged in doctor to view all medical records they made with options to make edits or deletions-->
+ 
+  <!--Buttons to navigate the site-->
 <div class="nav-container">
     <a href="{{ url_for('create_report') }}" class="nav-button">Dashboard</a>
     <a href="{{ url_for('create_report') }}" class="nav-button">Create Report</a>
@@ -16,6 +22,7 @@
     <a href="{{ url_for('logout') }}" class="nav-button">Log out</a>  
 </div>
 
+  <!--Flash messages-->
 <div class="flash-message">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -30,6 +37,7 @@
     {% block content %}{% endblock %}
 </div>
 
+  <!--Table to view Doctor Records retrieved from database-->
 <table>
   <tr>
     <th>Report ID</th>
@@ -50,6 +58,7 @@
       <td>{{ report.treatment }}</td>
       <td>{{ report.created_at }}</td>
 
+      <!--Buttons to edit and delete medical report-->
       <td class="action-cell">
         <div class="action-buttons">
           <a class="btn edit-btn" href="{{ url_for('edit_report', report_id=report.report_id) }}">Edit</a>

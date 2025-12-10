@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/registersuccess.css') }}">
-  <title>Registration Success</title>
+  <title>Success Page</title>
 </head>
 <body>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Registration Success</h1>
+  </div>
 
 <!--Registration success page that a user is redirected to once successfully registered-->
 <div class="nav-container">
@@ -32,6 +36,5 @@
 
   <h1>Registration Successful!</h1>
   <p>Thank you for submitting the form. <a href="{{ url_for('login') }}"> Login here. </a></p>
-  <a href="/">Back to Home</a>
 </body>
 </html>
