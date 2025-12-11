@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <title>About Page</title>
+</head>
+<body>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>About Stroke Predictions Analytics</h1>
+  </div>
+
+<!--About page to explain the purpose of the site.-->
+
+<!--Buttons to navigate the site-->
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/login" class="nav-button">Login</a> 
+  <a href="/register" class="nav-button">Register</a>
+</div>
+
+  <h2>Purpose of the Site</h2>
+  <p>Platform for health professionals to manage patient data and assess the probability of stroke for preventative healthcare.</p>
+</body>
+</html>

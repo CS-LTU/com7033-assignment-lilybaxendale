@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(188, 232, 247); /*body of site is light blue*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #04047c; /*main title h1 text is dark blue*/
+}
+
+p {
+    color: #04047c; /*paragraph text is dark blue*/
+}
+
+/*navigation buttons are white with dark blue text and rounded shape*/
+.nav-button { 
+    display: inline-block;
+    background-color: white;
+    color: #04047c;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+/*navigation buttons are centred*/
+.nav-container{
+    text-align: center;
+    margin-bottom:20px;
+}
+
+/*h2 text is dark blue*/
+h2 {
+    color: #04047c;
+}
+.submit-btn {
+    width: 150px; 
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.flash-message {
+    text-align: center; /*align flash messages in center*/
+}
+
+.flash {
+    list-style: none; /*to remove bullet points*/
+    padding: 0;
+    margin: 0;
+}
+
+.flash li {
+    color: red; /*flash message text red*/
+    font-weight: bold; /*making text bold*/
+}
+
+.error {
+    color: red;
+}
+
+/*setting maximum width on form*/
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*making inputs fill new narrower space */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/*Styling the edit form using card styling*/
+.form-container {
+    background-color: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Form grouping to make space between rows */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #04047c;
+}
+
+/* Input formatting */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/*Styling for the logo and logo container below*/
+.header-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*Styles for the logo above title*/
+.main-logo {
+    width: 220px;
+    height: auto;
+}
+

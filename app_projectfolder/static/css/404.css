@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(188, 232, 247);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #04047c;
+}
+
+/*h2 text is dark blue*/
+h2 {
+    color: #04047c;
+}
+
+p {
+    color: #04047c;
+}
+
+/*navigation buttons are white with dark blue text and rounded shape*/
+.nav-button { 
+    display: inline-block;
+    background-color: white;
+    color: #04047c;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+/*navigation buttons are centred*/
+.nav-container{
+    text-align: center;
+    margin-bottom:20px;
+}
+
+/*Styling for the logo and logo container below*/
+.header-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*Styles for the logo above title*/
+.main-logo {
+    width: 220px;
+    height: auto;
+}

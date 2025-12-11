@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/registerform.css') }}">
+  <title>Registration Form</title>
+</head>
+<body>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Registration Form For New Doctors</h1>
+  </div>
+<!--Registration page where doctors new to the site can register.-->
+
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/login" class="nav-button">Login</a> 
+</div>
+
+<!--Flash messages to show any errors in input validation -->
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+<!--Form for a new user to enter their first name, last name, username, email and password. -->
+ <form method="post", action="/register">
+
+    <div class="form-group">
+      <label for="First_name">First name</label>
+      <input 
+        type="text"
+        id="First_name"
+        name="First_name"
+        maxlength="254"
+        title="Please enter a valid first name, only letters and hyphens are allowed." 
+        required
+        pattern="^[A-Za-z-]{1,254}$"> <!-- client-side validation of first name to ensure only letters and hyphens are allowed.-->
+    </div> 
+
+    <div class="form-group">
+      <label for="Last_name">Last name</label>
+      <input 
+        type="text"
+        id="Last_name"
+        name="Last_name"
+        maxlength="254"
+        title="Please enter a valid last name, only letters and hyphens are allowed." 
+        required
+        pattern="^[A-Za-z-]{1,254}$"> <!-- client-side validation of last name to ensure only letters and hyphens are allowed.-->
+    </div> 
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+      type="text" 
+      id="username" 
+      name="username"
+      pattern="[A-Za-z0-9_]{5,16}" 
+      title="Username must be 5-16 characters (including letters, digits, underscores)."
+      required> <!-- client-side validation of username to ensure it is between 5 and 16 characters.-->
+    </div> 
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        type="email"
+        id="email"
+        name="email"
+        maxlength="254"
+        title="Please enter a valid email address." 
+        pattern="[\w\.-]+@[\w\.-]+\.[A-Za-z]{2,}$"
+        required> <!-- client-side validation of email to ensure it is the correct email format.-->
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input 
+        type="password"
+        id="password"
+        name="password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        title="Password must be at least 8 characters, with lowercase and uppercase characters, at least one digit and a special character."
+        required> <!-- client-side validation of password to ensure it is at least 8 characters, with lowercase and uppercase characters, at least one digit and a special character.-->
+    </div>
+    
+      <button type ="submit" class="register-submit-btn">Register</button>
+</form>
+
+</body>
+</html>

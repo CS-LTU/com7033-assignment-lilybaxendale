@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <title>Doctor Dashboard</title>
+
+</head>
+<body>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Doctor Dashboard</h1>
+  </div>
+
+<!--Dashboard page once a user has successfully logged in via the login page. -->
+<div class="nav-container">
+  <a href="{{ url_for('view_reports') }}" class="nav-button">View Reports</a> 
+  <a href="{{ url_for('create_report') }}" class="nav-button">Create Report</a>
+  <a href="{{ url_for('view_patients') }}" class="nav-button">View Patients</a>    
+  <a href="{{ url_for('logout') }}" class="nav-button">Log out</a>
+</div>
+
+<!--Flash messages upon successful login -->
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+  <p>Hello, {{ session.user_name }} </p>
+</body>
+</html>

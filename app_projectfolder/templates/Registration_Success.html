@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/registersuccess.css') }}">
+  <title>Success Page</title>
+</head>
+<body>
+  <div class="header-title">
+    <img src="{{ url_for('static', filename='images/MediCare_.png') }}" alt="Hospital Logo" class="main-logo">
+    <h1>Registration Success</h1>
+  </div>
+
+<!--Registration success page that a user is redirected to once successfully registered-->
+<div class="nav-container">
+  <a href="/" class="nav-button">Home</a> 
+  <a href="/about" class="nav-button">About</a> 
+  <a href="/login" class="nav-button">Login</a> 
+</div> 
+
+<!--Flash message to confirm successful registration-->
+<div class="flash-message">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash">
+          {% for category, message in messages %}
+            <li class="flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+  <h1>Registration Successful!</h1>
+  <p>Thank you for submitting the form. <a href="{{ url_for('login') }}"> Login here. </a></p>
+</body>
+</html>
